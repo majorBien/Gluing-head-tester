@@ -42,12 +42,12 @@ void MX_TIM15_Init(void)
 
   /* USER CODE END TIM15_Init 1 */
   htim15.Instance = TIM15;
-  htim15.Init.Prescaler = 0;
+  htim15.Init.Prescaler = 127;
   htim15.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim15.Init.Period = 65535;
+  htim15.Init.Period = 20;
   htim15.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim15.Init.RepetitionCounter = 0;
-  htim15.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim15.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_PWM_Init(&htim15) != HAL_OK)
   {
     Error_Handler();
